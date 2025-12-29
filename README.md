@@ -1,5 +1,11 @@
 Rust_EK Dokumentation
 
+Befehl zum ausführen: \
+`cargo test`
+
+Rust-Datei: \
+Dateiname.rs
+
 
 Beispiel Funktion:
 ```
