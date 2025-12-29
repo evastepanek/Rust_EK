@@ -1,4 +1,4 @@
-use rand::Rng; // Für Abschnitt 7 benötigt
+use rand::Rng; // Für Abschnitt 7 
 
 // ---------- 1. BASICS ----------
 pub fn greet(name: &str) -> String {
