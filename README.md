@@ -36,10 +36,10 @@ Die restlichen Funktionen können in scr/lib.rs nachgelesen werden.
 | `Option<&T>` | Enum, gibt entweder Same(&T) oder None (Liste war leer) zurück | |
 | `\|a, b\|` | Parameter einer Closure (wie Lamda) | `items.iter().max_by(\|a, b\| { ... })` |
 | `Result<u16, String>` | Entweder es funktioniert Ok(u16) oder es gibt einen Fehler err(String) | `pub fn parse_port(s: &str) -> Result<u16, String> {}` |
-| `::<u16>` | | |
+| `::<u16>` | Turbofish, Teilt dem Compiler mit welcher Datentyp erwartet wird | |
 | `.map_err` | wenn parse fehlschlägt wird der Fehler mit eigener fehlermeldung versehen | `s.parse::<u16>().map_err(\|e\| format!("Invalid port: {}", e))` | `0..=n` | Ein Range, = bedeutet inclusive, also inc´klusive der Zahl n | |
-| `.filter` | | |
-| `.map` | | |
-| `.collect()` | sammelt die Werte des Iterators in eine Kollektion | `(0..=n).filter(|x| x % 2 == 0).map(|x| x * x).collect()` |
+| `.filter` | Erzeugt einen neuen Iterator, der nur die Elemente behält, die eine bestimmte Bedingung erfüllen | |
+| `.map` | Transformiert jedes Element des Iterators in etwas Neues| |
+| `.collect()` | sammelt die Werte des Iterators in eine Kollektion | `(0..=n).filter(\|x\| x % 2 == 0).map(\|x\| x * x).collect()` |
 
 
